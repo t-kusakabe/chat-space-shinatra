@@ -1,4 +1,12 @@
-%h1
-  This is Layout.haml
+!!!
+%html
+  %head
+    %meta{ content: "text/html; charset=UTF-8", http: { equiv: "Content-Type" }}
+    %title Chat Space
+    %link{ rel: "stylesheet", href: "stylesheets/application.css" }
 
-= yield
+  %body
+    %h1
+      This is Layout.haml
+
+    = yield

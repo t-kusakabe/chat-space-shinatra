@@ -1,0 +1,134 @@
+.chat-main {
+  display: inline-block;
+  @include calc(width, '100vw - #{$sidebar_width}');
+  height: 100vh;
+  float: right;
+
+  &__header {
+    height: 100px;
+    padding: 0 40px;
+
+    &__group-info {
+      display: inline-block;
+      margin-top: 35px;
+
+      &__name {
+        letter-spacing: 2px;
+        font-size: 20px;
+        color: $font_black;
+      }
+
+      &__members, &__members a {
+        margin-top: 8px;
+        text-decoration: none;
+        font-size: 13px;
+        color: $font_gray;
+      }
+    }
+
+    &__edit-button {
+      display: inline-block;
+      height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      float: right;
+      border: 2px solid;
+      line-height: 40px;
+      font-size: 14px;
+      text-decoration: none;
+      color: $font_sky_blue;
+    }
+  }
+
+  &__body {
+    @include calc(height, '100vh - #{$header_height} - #{$footer_height}');
+    border-top: 1px solid $border_color;
+    @include overflow-scroll;
+    background-color: $bg_gray;
+
+    .chat-messages {
+      padding: 46px 40px;
+
+      .chat-message {
+        margin-bottom: 40px;
+        color: $font_light_black;
+
+        &__name {
+          display: inline-block;
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        &__date {
+          display: inline-block;
+          margin-left: 10px;
+          font-size: 12px;
+        }
+
+        &__body {
+          margin: 10px 0 40px;
+          font-size: 14px;
+        }
+
+        &--color {
+          color: $font_gray;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    @include calc(width, '100vw - #{$sidebar_width}');
+    height: $footer_height;
+    padding: 20px 40px;
+    background-color: $footer_bg_gray;
+    @include border_box;
+    position: absolute;
+    bottom: 0;
+
+    &__form {
+      @include calc(width, '100% - #{$footer_margin}');
+      height: 20px;
+      padding: 15px 10px;
+      resize: none;
+      border: none;
+      float: left;
+
+      &__image {
+        display: inline-block;
+        height: 50px;
+        position: relative;
+        right: 30px;
+        line-height: 50px;
+
+        &--none {
+          display: none;
+        }
+      }
+    }
+
+    &__button {
+      width: 100px;
+      height: 50px;
+      position: absolute;
+      bottom: 20px;
+      right: 40px;
+      border: none;
+      color: $font_white;
+      background-color: $button_light_blue;
+    }
+
+    &__edit-button {
+      display: inline-block;
+      height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      float: right;
+      border: 2px solid;
+      line-height: 40px;
+      font-size: 14px;
+      text-decoration: none;
+      color: $font_sky_blue;
+    }
+  }
+}

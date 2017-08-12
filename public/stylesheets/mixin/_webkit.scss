@@ -1,0 +1,15 @@
+@mixin border_box {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+       -o-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@mixin overflow-scroll {
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

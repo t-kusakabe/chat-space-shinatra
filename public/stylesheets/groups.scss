@@ -1,0 +1,164 @@
+// index action
+.chat-side {
+  display: inline-block;
+  height: 100vh;
+  width: $sidebar_width;
+  background-color: $bg_black;
+  color: $font_white;
+
+  .chat-user {
+    height: 100px;
+    padding: 20px;
+    @include border_box;
+    background-color: $bg_light_black;
+
+    &__name {
+      display: inline-block;
+      padding-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    &__action {
+      float: right;
+      margin-left: 7px;
+      padding-top: 15px;
+      font-size: 20px;
+      color: $font_white;
+    }
+  }
+
+  .chat-groups {
+    @include calc(height, "100vh - #{$header_height}");
+    @include overflow-scroll;
+
+    .chat-group {
+      padding: 20px;
+
+      &:hover {
+        background-color: $bg_light_white;
+      }
+
+      &__link {
+        text-decoration: none;
+        color: $font_white;
+      }
+
+      &__name {
+        margin-bottom: 11px;
+        font-size: 15px;
+      }
+
+      &__message {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+// new action
+.chat-group-form {
+  width: 980px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #FFF;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  @include border_box;
+
+  h1 {
+    letter-spacing: 2px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .chat-group-form__errors {
+    margin: 30px 0;
+    padding: 20px 40px;
+    border: 1px solid #DDD;
+    border-radius: 2px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 10px;
+      color: #F05050;
+      font-size: 14px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      font-size: 13px;
+    }
+  }
+
+  .chat-group-form__field {
+    margin-top: 30px;
+
+    .chat-group-form__field--left {
+      display: inline-block;
+      width: 30%;
+      padding-right: 20px;
+      padding-left: 20px;
+      @include border_box;
+    }
+
+    .chat-group-form__field--right {
+      float: right;
+      width: 70%;
+    }
+
+    .chat-group-form__label {
+      display: block;
+      line-height: 50px;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    .chat-group-form__input {
+      float: left;
+      width: 100%;
+      line-height: 30px;
+      padding: 10px 15px;
+      @include border_box;
+    }
+  }
+
+  .chat-group-user {
+    padding: 0 15px;
+    line-height: 50px;
+    font-size: 14px;
+    border-bottom: 1px solid #DDD;
+
+    .chat-group-user__btn {
+      float: right;
+      display: inline-block;
+      cursor: pointer;
+
+      &.chat-group-user__btn--add {
+        color: #38AEF0;
+      }
+
+      &.chat-group-user__btn--remove {
+        color: #F05050;
+      }
+    }
+  }
+
+  .chat-group-form__action-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #FFF;
+    background-color: #38AEF0;
+    border: 0;
+  }
+}
