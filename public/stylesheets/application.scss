@@ -1,5 +1,5 @@
 @import './reset';
-@import 'font-awesome';
+// @import 'font-awesome';
 @import './config/_color';
 @import './config/_variable';
 @import './mixin/_calc';
@@ -9,3 +9,7 @@
 @import './flash_message';
 @import './groups';
 @import './messages';
+
+* {
+  background-color: red;
+}
