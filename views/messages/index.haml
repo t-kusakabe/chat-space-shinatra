@@ -1,0 +1,36 @@
+= render template: 'groups/index'
+
+.chat-main
+  .chat-main__header
+    .chat-main__header__group-info
+      .chat-main__header__group-info__name
+        = @group.name
+      .chat-main__header__group-info__members
+        Members:
+        = link_to 'foo', '#'
+    = link_to 'Edit', '#', class: 'chat-main__header__edit-button'
+
+  .chat-main__body
+    .chat-messages
+      .chat-message
+        %p.chat-message__name
+          user name
+        %p.chat-message__date.chat-message--color
+          1996/7/4 10:10:00
+        %p.chat-message__body
+          Hello, World!!
+      .chat-message
+        %p.chat-message__name
+          user name
+        %p.chat-message__date.chat-message--color
+          1996/7/4 10:10:00
+        %p.chat-message__body
+          Hello, World!!
+
+  .chat-main__footer
+    = form_tag do
+      = text_area_tag :message, '', placeholder: 'type a message', class: 'chat-main__footer__form'
+      = label_tag :iamge, class: 'chat-main__footer__form__image' do
+        = file_field_tag :image, class: 'chat-main__footer__form__image--none'
+        = fa_icon 'picture-o'
+      = submit_tag 'Send', class: 'chat-main__footer__button'

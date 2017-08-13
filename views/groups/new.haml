@@ -1,0 +1,25 @@
+.chat-group-form
+  %h1
+    新規チャットグループ
+  #new_chat_group.new_chat_group
+    = form_for @group do |f|
+      .chat-group-form__field
+        .chat-group-form__field--left
+          .chat-group-form__label
+            = f.label :グループ名
+        .chat-group-form__field--right
+          #chat_group_name
+            = f.text_field :name, placeholder: 'グループ名を入力してください', required: true, class: 'chat-group-form__input form-control'
+      .chat-group-form__field
+        .chat-group-form__field--left
+          .chat-group-form__label
+            = f.label :チャットメンバーを追加
+        .chat-group-form__field--right
+          .chat-group-form__search
+            = f.collection_check_boxes :user_ids, User.all, :id, :name
+          #user-search-result
+
+      .chat-group-form__field
+        .chat-group-form__field--left
+        .chat-group-form__field--right
+          = f.submit :Save, class: 'chat-group-form__action-btn'
