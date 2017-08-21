@@ -4,15 +4,14 @@
     %meta{ content: "text/html; charset=UTF-8", http: { equiv: "Content-Type" }}
     %title Chat Space
     %link{ crossorigin: "anonymous", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", integrity: "sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", rel: "stylesheet" }
-    %link{ rel: "stylesheet", href: "stylesheets/application.css" }
+    %link{ rel: "stylesheet", href: "/stylesheets/application.css" }
 
   %body
-    %h1
-      -# - if notice
-      -#   %p.alert.alert--notice
-      -#     = notice
-      -# - if alert
-      -#   %p.alert.alert--error
-      -#     = alert
+    -# - if notice
+    -#   %p.alert.alert--notice
+    -#     = notice
+    -# - if alert
+    -#   %p.alert.alert--error
+    -#     = alert
 
     = yield
