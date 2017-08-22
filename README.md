@@ -1,3 +1,15 @@
+# ChatSpace
+
+# Ver
+- Ruby: 2.4.1
+- Sinatra: 2.0.0
+
+# Command
+
+```
+
+```
+
 # db_design
 
 ### usersテーブル
