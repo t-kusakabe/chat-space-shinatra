@@ -32,7 +32,7 @@
 |image|
 |user_id|
 |chat_group_id|
-| timestamp|
+|timestamp|
 
 ### chat_groupsテーブル
 
